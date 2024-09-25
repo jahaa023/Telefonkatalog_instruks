@@ -83,13 +83,27 @@
    Kjør disse kommandoene:
    ```
    sudo apt install python3-pip
-   ```
-   ```
    sudo apt install git
-   ```
-   ```
    sudo apt install mariadb-server
-   ```
-   ```
    sudo apt mysql_secure_installation
    ```
+## Sett opp database i MariaDB
+   Nå skal vi sette opp en database med MariaDB med den nødvendige dataen til å ha et fungerende program.
+   Kjør disse kommandoene:
+   1. Logg inn på MariaDB. 
+   ```
+   sudo mariadb -u root
+   ```
+   2. Lag en ny bruker på MariaDB. Skift "username" og "password" med brukernavn og passord du vil ha. I denne brukerveiledningen heter brukeren username og passordet er password.
+   ```
+   CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+   ```
+   3. Gi den nye brukeren rettigheter.
+   ```
+   GRANT ALL PRIVILEGES ON . TO 'username'@'localhost' IDENTIFIED BY 'password';
+   ```
+   4. Ferdiggjør rettighetene.
+   ```
+   FLUSH PRIVILEGES;
+   ```
+   
