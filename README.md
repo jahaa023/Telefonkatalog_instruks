@@ -87,7 +87,7 @@
    sudo apt install mariadb-server
    sudo apt mysql_secure_installation
    ```
-## Sett opp database i MariaDB
+## Sett opp database-bruker i MariaDB
    Nå skal vi sette opp en database med MariaDB med den nødvendige dataen til å ha et fungerende program.
    Kjør disse kommandoene:
    1. Logg inn på MariaDB. 
@@ -106,4 +106,13 @@
    ```
    FLUSH PRIVILEGES;
    ```
+## Koble til Raspberry Pi fra ekstern Windows maskin
+   1. Åpne Command Prompt eller CMD ved å søke det opp i søkefeltet i Windows eller ved å trykke Windows+R og skrive inn "cmd" og trykke Enter.
+   2. Inne i CMD, skriv følgende kommando. Skift ut "username" med brukernavnet til Raspberry Pien din og "ip" med ip adressen som du fikk tidligere.
+      ```
+      ssh brukernavn@ip
+      ```
+   Nå kommer en Linux terminal til å komme opp på Windows maskinen. Dette er da terminalen på Raspberry Pien din og man kan kjøre kommandoer på Raspberry Pien fra Windows maskinen.
+## Kopier (clone) koden til Telefonkatalogen fra GitHub.
+   
    
