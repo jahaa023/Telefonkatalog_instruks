@@ -28,5 +28,10 @@
    <img src="https://www.raspberrypi.com/documentation/computers/images/initial-setup/restart.png?hash=a4722ccce3851961d3c05d4ac8245452" /><br>
 
 # Last ned SSH
+## Åpne terminalen
+Når du kommer inn på Desktopen, åpne Terminalen ved å trykke Ctrl + Alt + T. Terminalen burde se sånn ut: <br>
+<img src="https://projects-static.raspberrypi.org/projects/raspberry-pi-using/a350db60b2175ef5956613b7cba3a312d509cc56/en/images/pi-command-prompt.png" /><br>
+
+
 
    
