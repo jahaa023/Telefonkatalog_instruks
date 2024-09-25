@@ -28,9 +28,51 @@
    <img src="https://www.raspberrypi.com/documentation/computers/images/initial-setup/restart.png?hash=a4722ccce3851961d3c05d4ac8245452" /><br>
 
 # Last ned SSH
-## Åpne terminalen
-Når du kommer inn på Desktopen, åpne Terminalen ved å trykke Ctrl + Alt + T. Terminalen burde se sånn ut: <br>
-<img src="https://projects-static.raspberrypi.org/projects/raspberry-pi-using/a350db60b2175ef5956613b7cba3a312d509cc56/en/images/pi-command-prompt.png" /><br>
+   ## Åpne terminalen og last ned oppdateringer.
+   Når du kommer inn på Desktopen, åpne Terminalen ved å trykke Ctrl + Alt + T. Terminalen burde se sånn ut: <br>
+   <img src="https://github.com/jahaa023/Telefonkatalog_instruks/blob/main/img/pi-command-prompt.png" /><br>
+   I terminalen skriv dette:
+   ```
+   sudo apt update
+   ```
+   og dette:
+   ```
+   sudo apt upgrade
+   ``` 
+   Disse kommandoene sørger for at vi har alle de nyeste oppdateringene lastet den.
+   ## Set opp brannmur for SSH
+   Det er lurt å ha en firewall i systemet vårt, så vi laster ned og setter opp UFW.
+   1. Last ned UFW (uncomplicated firewall) :
+      ```
+      sudo apt install ufw
+      ```
+   2. Skru på firewall:
+      ```
+      sudo ufw enable
+      ```
+   3. Tillat SSH gjennom brannmuren:
+      ```
+      sudo ufw allow ssh
+      ```
+   4. Til slutt, sjekk statusen av firewall:
+      ```
+      sudo ufw status
+      ```
+   ## Last ned og skru på SSH
+   SSH er ett program som lar oss kjøre kommandoer på Raspberry Pien vår fra en annen maskin.
+   1. Last ned SSH-server:
+      ```
+      sudo apt install openssh-server
+      ```
+   2. Skru på SSH når PCen starter i fremtiden:
+      ```
+      sudo systemctl enable ssh
+      ```
+   3. Skru på SSH:
+      ```
+      sudo systemctl start ssh
+      ```
+   
 
 
 
