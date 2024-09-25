@@ -77,8 +77,4 @@
       ip a
       ```
       Resultatet av kommandoes burde se ut som noe likt dette. IPen som er i den røde boksen er den vi fokuserer på. Dette er ip-adressen vi bruker til å koble til Raspberry       Pien via ssh: <br>
-   
-
-
-
-   
+      <img src="https://github.com/jahaa023/Telefonkatalog_instruks/blob/main/img/ipa_terminal.png" /><br>
