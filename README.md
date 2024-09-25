@@ -78,3 +78,18 @@
       ```
       Resultatet av kommandoen burde se ut som noe likt dette. IPen som er i den røde boksen er den vi fokuserer på. Dette er ip-adressen vi bruker til å koble til Raspberry       Pien via ssh hvis du bruker trådløs nettverk. Hvis du bruker ethernet kabel, så er ip-adressen etter "eth0:": <br>
       <img src="https://github.com/jahaa023/Telefonkatalog_instruks/blob/main/img/ipa_terminal_red.png" /><br>
+## Installer Git, Python og MariaDB
+   Nå skal vi laste ned alle de nødvendige applikasjonene for at koden skal fungere.
+   Kjør disse kommandoene:
+   ```
+   sudo apt install python3-pip
+   ```
+   ```
+   sudo apt install git
+   ```
+   ```
+   sudo apt install mariadb-server
+   ```
+   ```
+   sudo apt mysql_secure_installation
+   ```
