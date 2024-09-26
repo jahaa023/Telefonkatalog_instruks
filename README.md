@@ -155,7 +155,6 @@
       Dette er alle filene i mappen. Vi trenger koden i alle .sql filene for å lage de nødvendige databasene og tabellene for at programmet skal funke.
 ## Lag database og tabeller i MariaDB
       1. Start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
-      
       ```
       sudo mariadb -u username -p
       ```
