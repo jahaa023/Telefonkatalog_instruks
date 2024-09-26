@@ -195,8 +195,3 @@
       ```
 ## Koble Python filen til databasen.
       Etter at vi har settet opp og testet databasen er det tid for å koble databasen til Python filen.
-      
-      
-      
-   
-   
