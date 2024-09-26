@@ -143,23 +143,21 @@
       ```
       cd sql/
       ```
-      Når det er gjort kjører vi ls kommandoen igjen for å sa hva som er inne i mappen.
+      Når det er gjort kjører vi "ls" kommandoen igjen for å sa hva som er inne i mappen.
       ```
       ls
       ```
       Du burde få dette tilbake:
       ```
-      1_lag_database.sql 2_lag_tabell.sql 3_lag_testdata.sql 4_select_data.sql 
-      readme_sql.md
-      ```
+      1_lag_database.sql 2_lag_tabell.sql 3_lag_testdata.sql 4_select_data.sql readme_sql.md
+      ```   
       Dette er alle filene i mappen. Vi trenger koden i alle .sql filene for å lage de nødvendige databasene og tabellene for at programmet skal funke.
-## Lag database og tabeller i MariaDB
+   ## Lag database og tabeller i MariaDB
       1. Start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
       ```
       sudo mariadb -u username -p
       ```
-      2. Kopier koden fra de 3 første .sql filene og lim de inn i terminalen. Gjør det med riktig rekkefølge, fra 1 til 3.
-      Vi starter med "1_lag_database.sql".
+      2. Kopier koden fra de 3 første .sql filene og lim de inn i terminalen. Gjør det med riktig rekkefølge, fra 1 til 3. Vi starter med "1_lag_database.sql".
       ```
       CREATE DATABASE telefonkatalog;
       ```
