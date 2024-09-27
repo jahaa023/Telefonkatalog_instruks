@@ -42,7 +42,7 @@
    Disse kommandoene sørger for at vi har alle de nyeste oppdateringene lastet den.
    ## Set opp brannmur for SSH
    Det er lurt å ha en firewall i systemet vårt, så vi laster ned og setter opp UFW.
-   1. Last ned UFW (uncomplicated firewall) :
+   1. Last ned UFW (uncomplicated firewall). Den kommer til å spørre deg om å fortsette installeringsprossesen. Når den gjørt dette, skriv "y" :
       ```
       sudo apt install ufw
       ```
