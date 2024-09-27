@@ -132,29 +132,10 @@
       1_lag_database.sql 2_lag_tabell.sql 3_lag_testdata.sql 4_select_data.sql readme_sql.md
       ```
       Dette er alle filene i mappen. Vi trenger koden i alle .sql filene for å lage de nødvendige databasene og tabellene for at programmet skal funke.
-      ## Sett opp database-bruker i MariaDB
-      Nå skal vi sette opp en database med MariaDB med den nødvendige dataen til å ha et fungerende program.
-      Kjør disse kommandoene:
-      1. Logg inn på MariaDB. 
+      ## Lag databasen og tabeller i MariaDB
+      På Windows maskinen i Linux terminalen, start med å logge inn på MariaDB.
       ```
       sudo mariadb -u root
-      ```
-      2. Lag en ny bruker på MariaDB. Skift "username" og "password" med brukernavn og passord du vil ha. I denne brukerveiledningen heter brukeren username og passordet er password.
-      ```
-      CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-      ```
-      3. Gi den nye brukeren rettigheter.
-      ```
-      GRANT ALL PRIVILEGES ON . TO 'username'@'localhost' IDENTIFIED BY 'password';
-      ```
-      4. Ferdiggjør rettighetene.
-      ```
-      FLUSH PRIVILEGES;
-      ```
-      ## Lag databasen og tabeller i MariaDB
-      På Windows maskinen i Linux terminalen, start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
-      ```
-      sudo mariadb -u username -p
       ```
       Kopier koden fra de 3 første .sql filene og lim de inn i terminalen. Gjør det med riktig rekkefølge, fra 1 til 3. Vi starter med "1_lag_database.sql".
       ```
@@ -188,6 +169,25 @@
       SELECT fornavn, telefonnummer FROM person;
       SELECT * FROM person WHERE fornavn = "Erik";
       SELECT telefonnummer FROM person WHERE fornavn = "Lise" AND etternavn = "Pise";
+      ```
+      ## Sett opp database-bruker i MariaDB
+      Nå skal vi sette opp en database-bruker med MariaDB.
+      Kjør disse kommandoene:
+      1. Lag en ny bruker på MariaDB. Skift "username" og "password" med brukernavn og passord du vil ha. I denne brukerveiledningen heter brukeren username og passordet er password.
+      ```
+      CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+      ```
+      1. Gi den nye brukeren rettigheter.
+      ```
+      GRANT ALL PRIVILEGES ON . TO 'username'@'localhost' IDENTIFIED BY 'password';
+      ```
+      3. Ferdiggjør rettighetene.
+      ```
+      FLUSH PRIVILEGES;
+      ```
+      4. Gå ut av MariaDB
+      ```
+      exit
       ```
       ## Koble Python filen til databasen.
       Etter at vi har settet opp og testet databasen er det tid for å koble databasen til Python filen.
