@@ -150,7 +150,7 @@
       Du burde få dette tilbake:
       ```
       1_lag_database.sql 2_lag_tabell.sql 3_lag_testdata.sql 4_select_data.sql readme_sql.md
-      ```   
+      ```
       Dette er alle filene i mappen. Vi trenger koden i alle .sql filene for å lage de nødvendige databasene og tabellene for at programmet skal funke.
    ## Lag database og tabeller i MariaDB
       1. Start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
@@ -165,11 +165,11 @@
       ```
       USE telefonkatalog;
       CREATE TABLE person (
-       id int NOT NULL AUTO_INCREMENT,
-       fornavn VARCHAR(255) NOT NULL,
-       etternavn VARCHAR(255) NOT NULL,
-       telefonnummer CHAR(8),
-       PRIMARY KEY (id)
+      id int NOT NULL AUTO_INCREMENT,
+      fornavn VARCHAR(255) NOT NULL,
+      etternavn VARCHAR(255) NOT NULL,
+      telefonnummer CHAR(8),
+      PRIMARY KEY (id)
       );
       ```
       Til sist tar vi "3_lag_testdata.sql"
@@ -186,11 +186,8 @@
       For å teste om databasen funker kan vi kopiere kommandoene fra "4_select_data.sql".
       ```
       SELECT * FROM person;
-
       SELECT fornavn, telefonnummer FROM person;
-      
       SELECT * FROM person WHERE fornavn = "Erik";
-      
       SELECT telefonnummer FROM person WHERE fornavn = "Lise" AND etternavn = "Pise";
       ```
 ## Koble Python filen til databasen.
