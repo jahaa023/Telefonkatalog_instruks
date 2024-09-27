@@ -115,7 +115,7 @@
    Etter du skriven inn kommandoen må du skrive inn passordet til Raspberry Pien som du lagde tidligere
    Nå kommer en Linux terminal til å komme opp på Windows maskinen. Dette er da terminalen på Raspberry Pien din og man kan kjøre kommandoer på Raspberry Pien fra Windows maskinen.
 ## Kopier (clone) koden til Telefonkatalogen fra GitHub.
-   1. For å laste ned koden trenger vi først en mappe koden skal være i. Vi lager denne mappen med "mkdir" kommandoen, som står for "make directory"
+   1. For å laste ned koden trenger vi først en mappe koden skal være i. På Windows maskinen i Linux terminalen, lager vi denne mappen med "mkdir" kommandoen, som står for "make directory"
       ```
       mkdir telefonkatalog
       ```
@@ -152,12 +152,12 @@
       1_lag_database.sql 2_lag_tabell.sql 3_lag_testdata.sql 4_select_data.sql readme_sql.md
       ```
       Dette er alle filene i mappen. Vi trenger koden i alle .sql filene for å lage de nødvendige databasene og tabellene for at programmet skal funke.
-   ## Lag database og tabeller i MariaDB
-      1. Start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
+      ## Lag databasen og tabeller i MariaDB
+      På Windows maskinen i Linux terminalen, start med å logge inn på MariaDB med brukeren vi lagde tidligere. Skriv brukernavnet hvor det står "username" og skriv inn passordet når programmet ber om det.
       ```
       sudo mariadb -u username -p
       ```
-      2. Kopier koden fra de 3 første .sql filene og lim de inn i terminalen. Gjør det med riktig rekkefølge, fra 1 til 3. Vi starter med "1_lag_database.sql".
+      Kopier koden fra de 3 første .sql filene og lim de inn i terminalen. Gjør det med riktig rekkefølge, fra 1 til 3. Vi starter med "1_lag_database.sql".
       ```
       CREATE DATABASE telefonkatalog;
       ```
@@ -190,5 +190,15 @@
       SELECT * FROM person WHERE fornavn = "Erik";
       SELECT telefonnummer FROM person WHERE fornavn = "Lise" AND etternavn = "Pise";
       ```
-## Koble Python filen til databasen.
+      ## Koble Python filen til databasen.
       Etter at vi har settet opp og testet databasen er det tid for å koble databasen til Python filen.
+      Det første steget er å navigere til Python filen og endre koden.
+      På Windows maskinen i Linux terminalen, skriv denne kommandoen:
+      ```
+      cd -
+      ```
+      Denne kommandoen navigerer oss til den forigge mappen, altså "telefonkatalog_og_database/". Etter det navigierer vi inn i "python" mappen.
+      ```
+      cd python/
+      ```
+      Også må vi endre på filen for å skrive inn navn og passord til databasen vår. Man endrer file i 
